@@ -1,1 +1,227 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shop | Nikita's Natural</title><link rel="stylesheet" href="css/styles.css"></head><body><header class="site-header"><a class="brand" href="index.html"><img src="assets/logo.png" alt="Nikita's Natural"></a><button class="menu-toggle" aria-label="Open menu">☰</button><nav class="nav"><a href="index.html">Home</a><a class="active" href="shop.html">Shop</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></nav></header><main><section class="page-heading"><p class="eyebrow">Shop all products</p><h1><em>Handcrafted</em> Bath Essentials</h1><p>Small-batch beauty, poured in Dhule, for your everyday self-care rituals and thoughtful gifting.</p></section><section class="products-section"><div class="filters"><button class="filter active" data-filter="all">All products</button><button class="filter" data-filter="scrub">Body Scrubs</button><button class="filter" data-filter="soap">Soaps</button></div><div class="product-grid"><article class="product-card" data-category="scrub"><img src="assets/orange-scrub.jpg" alt="Orange Body Scrub"><h3>Orange Body Scrub</h3><p>₹150.00</p></article><article class="product-card" data-category="scrub"><img src="assets/watermelon-scrub.jpg" alt="Watermelon Body Scrub"><h3>Watermelon Body Scrub</h3><p>₹150.00</p></article><article class="product-card" data-category="scrub"><img src="assets/kesar-scrub.jpg" alt="Kesar Chandan Body Scrub"><h3>Kesar Chandan Body Scrub</h3><p>₹150.00</p></article><article class="product-card" data-category="scrub"><img src="assets/lemon-scrub.jpg" alt="Lemon Body Scrub"><h3>Lemon Body Scrub</h3><p>₹150.00</p></article><article class="product-card" data-category="scrub"><img src="assets/neem-scrub.jpg" alt="Neem Body Scrub"><h3>Neem Body Scrub</h3><p>₹150.00</p></article><article class="product-card" data-category="scrub"><img src="assets/lavender-scrub.jpg" alt="Lavender Natural Body Scrub"><h3>Lavender Natural Body Scrub</h3><p>₹150.00</p></article><article class="product-card" data-category="scrub"><img src="assets/ubtan-scrub.jpg" alt="Ayurvedic Ubtan Body Scrub"><h3>Ayurvedic Ubtan Body Scrub</h3><p>₹150.00</p></article><article class="product-card" data-category="soap"><img src="assets/lavender-soap.jpg" alt="Lavender Soap Bar"><h3>Lavender Soap Bar</h3><p>₹70.00</p></article><article class="product-card" data-category="soap"><img src="assets/neem-soap.jpg" alt="Herbal Neem Soap Bar"><h3>Herbal Neem Soap Bar</h3><p>₹70.00</p></article><article class="product-card" data-category="soap"><img src="assets/rose-soap.jpg" alt="Rose Soap Bar"><h3>Rose Soap Bar</h3><p>₹70.00</p></article><article class="product-card" data-category="soap"><img src="assets/ubtan-soap.jpg" alt="Ayurvedic Ubtan Soap Bar"><h3>Ayurvedic Ubtan Soap Bar</h3><p>₹80.00</p></article><article class="product-card" data-category="soap"><img src="assets/watermelon-soap.jpg" alt="Watermelon Crystal Soap Bar"><h3>Watermelon Crystal Soap Bar</h3><p>₹80.00</p></article><article class="product-card" data-category="soap"><img src="assets/lemon-soap.jpg" alt="Lemon Massage Soap Bar"><h3>Lemon Massage Soap Bar</h3><p>₹70.00</p></article><article class="product-card" data-category="soap"><img src="assets/orange-soap.jpg" alt="Orange Bliss Soap Bar"><h3>Orange Bliss Soap Bar</h3><p>₹70.00</p></article><article class="product-card" data-category="soap"><img src="assets/kesar-soap.jpg" alt="Keshar Chandan Soap Bar"><h3>Keshar Chandan Soap Bar</h3><p>₹80.00</p></article></div></section><section class="order-cta"><h2>Need a Custom Order?</h2><p>For bulk inquiries or bespoke scent combinations, message our studio directly.</p><a class="button" href="contact.html">Enquire Now</a></section></main><footer class="footer"><strong>Nikita's Natural</strong><p>Handcrafted bath essentials & bespoke hampers</p><div class="footer-links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div><p>+91 9422439890 · Dhule, Maharashtra, India</p><small>© 2026 Nikita's Natural</small></footer><script src="js/script.js"></script></body></html>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop | Nikita's Natural</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* Shop layout safeguards */
+    .products-section .product-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      gap: 22px !important;
+      width: 100%;
+      align-items: start;
+    }
+
+    .products-section .product-card {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      background: #fff;
+      padding-bottom: 18px;
+      overflow: hidden;
+      transition: transform .25s;
+    }
+
+    .products-section .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .products-section .product-card img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    .products-section .product-card h3,
+    .products-section .product-card p {
+      margin: 10px 15px 0;
+    }
+
+    .products-section .product-card h3 {
+      font-size: 1.35rem;
+      overflow-wrap: anywhere;
+    }
+
+    .products-section .product-card p {
+      font-size: .95rem;
+    }
+
+    @media (max-width: 1000px) {
+      .products-section .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .products-section .product-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .products-section .product-grid {
+        gap: 18px !important;
+      }
+
+      .products-section .product-card h3 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Nikita's Natural">
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a class="active" href="shop.html">Shop</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="eyebrow">Shop all products</p>
+      <h1><em>Handcrafted</em> Bath Essentials</h1>
+      <p>Small-batch beauty, poured in Dhule, for your everyday self-care rituals and thoughtful gifting.</p>
+    </section>
+
+    <section class="products-section">
+      <div class="filters">
+        <button class="filter active" data-filter="all">All products</button>
+        <button class="filter" data-filter="scrub">Body Scrubs</button>
+        <button class="filter" data-filter="soap">Soaps</button>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-category="scrub">
+          <img src="assets/orange-scrub.jpg" alt="Orange Body Scrub" loading="lazy">
+          <h3>Orange Body Scrub</h3>
+          <p>₹150.00</p>
+        </article>
+
+        <article class="product-card" data-category="scrub">
+          <img src="assets/watermelon-scrub.jpg" alt="Watermelon Body Scrub" loading="lazy">
+          <h3>Watermelon Body Scrub</h3>
+          <p>₹150.00</p>
+        </article>
+
+        <article class="product-card" data-category="scrub">
+          <img src="assets/kesar-scrub.jpg" alt="Kesar Chandan Body Scrub" loading="lazy">
+          <h3>Kesar Chandan Body Scrub</h3>
+          <p>₹150.00</p>
+        </article>
+
+        <article class="product-card" data-category="scrub">
+          <img src="assets/lemon-scrub.jpg" alt="Lemon Body Scrub" loading="lazy">
+          <h3>Lemon Body Scrub</h3>
+          <p>₹150.00</p>
+        </article>
+
+        <article class="product-card" data-category="scrub">
+          <img src="assets/neem-scrub.jpg" alt="Neem Body Scrub" loading="lazy">
+          <h3>Neem Body Scrub</h3>
+          <p>₹150.00</p>
+        </article>
+
+        <article class="product-card" data-category="scrub">
+          <img src="assets/lavender-scrub.jpg" alt="Lavender Natural Body Scrub" loading="lazy">
+          <h3>Lavender Natural Body Scrub</h3>
+          <p>₹150.00</p>
+        </article>
+
+        <article class="product-card" data-category="scrub">
+          <img src="assets/ubtan-scrub.jpg" alt="Ayurvedic Ubtan Body Scrub" loading="lazy">
+          <h3>Ayurvedic Ubtan Body Scrub</h3>
+          <p>₹150.00</p>
+        </article>
+
+        <article class="product-card" data-category="soap">
+          <img src="assets/lavender-soap.jpg" alt="Lavender Soap Bar" loading="lazy">
+          <h3>Lavender Soap Bar</h3>
+          <p>₹70.00</p>
+        </article>
+
+        <article class="product-card" data-category="soap">
+          <img src="assets/neem-soap.jpg" alt="Herbal Neem Soap Bar" loading="lazy">
+          <h3>Herbal Neem Soap Bar</h3>
+          <p>₹70.00</p>
+        </article>
+
+        <article class="product-card" data-category="soap">
+          <img src="assets/rose-soap.jpg" alt="Rose Soap Bar" loading="lazy">
+          <h3>Rose Soap Bar</h3>
+          <p>₹70.00</p>
+        </article>
+
+        <article class="product-card" data-category="soap">
+          <img src="assets/ubtan-soap.jpg" alt="Ayurvedic Ubtan Soap Bar" loading="lazy">
+          <h3>Ayurvedic Ubtan Soap Bar</h3>
+          <p>₹80.00</p>
+        </article>
+
+        <article class="product-card" data-category="soap">
+          <img src="assets/watermelon-soap.jpg" alt="Watermelon Crystal Soap Bar" loading="lazy">
+          <h3>Watermelon Crystal Soap Bar</h3>
+          <p>₹80.00</p>
+        </article>
+
+        <article class="product-card" data-category="soap">
+          <img src="assets/lemon-soap.jpg" alt="Lemon Massage Soap Bar" loading="lazy">
+          <h3>Lemon Massage Soap Bar</h3>
+          <p>₹70.00</p>
+        </article>
+
+        <article class="product-card" data-category="soap">
+          <img src="assets/orange-soap.jpg" alt="Orange Bliss Soap Bar" loading="lazy">
+          <h3>Orange Bliss Soap Bar</h3>
+          <p>₹70.00</p>
+        </article>
+
+        <article class="product-card" data-category="soap">
+          <img src="assets/kesar-soap.jpg" alt="Keshar Chandan Soap Bar" loading="lazy">
+          <h3>Keshar Chandan Soap Bar</h3>
+          <p>₹80.00</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="order-cta">
+      <h2>Need a Custom Order?</h2>
+      <p>For bulk inquiries or bespoke scent combinations, message our studio directly.</p>
+      <a class="button" href="contact.html">Enquire Now</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>Nikita's Natural</strong>
+    <p>Handcrafted bath essentials &amp; bespoke hampers</p>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <p>+91 9422439890 · Dhule, Maharashtra, India</p>
+    <small>© 2026 Nikita's Natural</small>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
